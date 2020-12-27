@@ -1,4 +1,4 @@
-package test
+package figlet4go
 
 import (
 	"flag"
@@ -21,8 +21,8 @@ func main() {
 	// change the font color
 	colors := [...]color.Attribute{
 		// color.FgMagenta,
-		color.FgYellow,
-		// color.FgBlue,
+		// color.FgYellow,
+		color.FgBlue,
 		// color.FgCyan,
 		// color.FgRed,
 		// color.FgWhite,
