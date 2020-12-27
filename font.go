@@ -18,18 +18,15 @@ type font struct {
 type fontManager struct {
 	// font library
 	fontLib map[string]*font
-
 	// font name to path
 	fontList map[string]string
 }
 
 func newFontManager() *fontManager {
 	this := &fontManager{}
-
 	this.fontLib = make(map[string]*font)
 	this.fontList = make(map[string]string)
 	this.loadBuildInFont()
-
 	return this
 }
 

@@ -9,8 +9,7 @@ import (
 )
 
 type RenderOptions struct {
-	FontName string // font name
-
+	FontName  string            // font name
 	FontColor []color.Attribute // every ascii byte's color
 }
 
@@ -26,7 +25,6 @@ type AsciiRender struct {
 
 func NewAsciiRender() *AsciiRender {
 	this := &AsciiRender{}
-
 	this.fontMgr = newFontManager()
 	return this
 }

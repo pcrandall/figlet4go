@@ -1,4 +1,4 @@
-package main
+package test
 
 import (
 	"flag"
@@ -21,17 +21,19 @@ func main() {
 	// change the font color
 	colors := [...]color.Attribute{
 		// color.FgMagenta,
-		// color.FgYellow,
+		color.FgYellow,
 		// color.FgBlue,
 		// color.FgCyan,
 		// color.FgRed,
-		color.FgWhite,
+		// color.FgWhite,
 	}
+
 	options := figlet4go.NewRenderOptions()
 	options.FontColor = make([]color.Attribute, len(str))
 	for i := range options.FontColor {
 		options.FontColor[i] = colors[i%len(colors)]
 	}
+
 	// renderStr, _ = ascii.RenderOpts(str, options)
 	// fmt.Println(renderStr)
 
