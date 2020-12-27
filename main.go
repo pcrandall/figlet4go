@@ -5,7 +5,6 @@ import (
 	"fmt"
 
 	"github.com/fatih/color"
-	// "github.com/pcrandall/figlet4go"
 	"github.com/getwe/figlet4go"
 )
 

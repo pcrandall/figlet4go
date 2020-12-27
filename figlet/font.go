@@ -56,7 +56,7 @@ func (this *fontManager) loadBuildInFont() error {
 	if err != nil {
 		return err
 	}
-	this.fontLib["bigMoneyNE"] = font
+	this.fontLib["default"] = font
 	return nil
 }
 
@@ -118,7 +118,7 @@ func (this *fontManager) getFont(fontName string) (*font, error) {
 	if !ok {
 		err := this.loadDiskFont(fontName)
 		if err != nil {
-			font, _ := this.fontLib["bigMoneyNE"]
+			font, _ := this.fontLib["default"]
 			return font, nil
 		}
 	}

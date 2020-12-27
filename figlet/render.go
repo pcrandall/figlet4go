@@ -16,7 +16,7 @@ type RenderOptions struct {
 
 func NewRenderOptions() *RenderOptions {
 	opt := &RenderOptions{}
-	opt.FontName = "bigMoneyNE"
+	opt.FontName = "default"
 	return opt
 }
 
