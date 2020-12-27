@@ -83,7 +83,7 @@ func (this *AsciiRender) render(asciiStr string, opt *RenderOptions) (string, er
 	result := ""
 
 	wordColorFunc := make([]func(a ...interface{}) string, len(wordlist))
-	for i, _ := range wordColorFunc {
+	for i := range wordColorFunc {
 		if i < len(opt.FontColor) {
 			wordColorFunc[i] = color.New(opt.FontColor[i]).SprintFunc()
 		} else {

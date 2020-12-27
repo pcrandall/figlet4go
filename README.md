@@ -14,17 +14,22 @@
 |__/      |______/ \______/ |________/|________/   |__/         |__/ \______/  \______/
 
 
-Big Money-ne font
+bigmoney-ne font (default)
 ```
 
+## Prints out to console in "bigmoney-ne" font
 
-## Get more fonts from [here](https://github.com/patorjk/figlet.js/tree/master/fonts) & [here](http://www.figlet.org/)
+Can include more external fonts to use.
+
+Get more fonts from [here](https://github.com/patorjk/figlet.js/tree/master/fonts) & [here](http://www.figlet.org/)
 
 ## Usage
 
 ```
+cd test/
+
 go build
 
-./figlet4go -str="hello world"
+./test -str="hello world"
 
 ```

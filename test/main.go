@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/fatih/color"
-	"github.com/getwe/figlet4go"
+	"github.com/pcrandall/figlet4go"
 )
 
 var flag_str = flag.String("str", "golang", "input string")
@@ -44,6 +44,7 @@ func main() {
 	// // ascii.LoadFont("/usr/local/Cellar/figlet/2.2.5/share/figlet/fonts/")
 
 	options.FontName = "bigMoneyNE"
+
 	ascii.LoadFont("./fonts/bigMoneyNE.flf")
 	renderStr, _ := ascii.RenderOpts(str, options)
 	fmt.Println(renderStr)
