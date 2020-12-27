@@ -1,3 +1,7 @@
+# Examples
+
+```go
+
 package main
 
 import (
@@ -14,40 +18,40 @@ func main() {
 	flag.Parse()
 	str := *flag_str
 	ascii := figlet4go.NewAsciiRender()
+
 	// most simple Usage
-	// renderStr, _ := ascii.Render(str)
-	// fmt.Println(renderStr)
+	renderStr, _ := ascii.Render(str)
+	fmt.Println(renderStr)
 
 	// change the font color
 	colors := [...]color.Attribute{
-		// color.FgMagenta,
-		// color.FgYellow,
-		// color.FgBlue,
-		// color.FgCyan,
+		color.FgMagenta,
+		color.FgYellow,
+		color.FgBlue,
+		color.FgCyan,
 		color.FgRed,
-		// color.FgWhite,
+		color.FgWhite,
 	}
-
 	options := figlet4go.NewRenderOptions()
 	options.FontColor = make([]color.Attribute, len(str))
 	for i := range options.FontColor {
 		options.FontColor[i] = colors[i%len(colors)]
 	}
+	renderStr, _ = ascii.RenderOpts(str, options)
+	fmt.Println(renderStr)
 
-	// renderStr, _ = ascii.RenderOpts(str, options)
-	// fmt.Println(renderStr)
-
-	// // change the font
-	// // except the default font,others need to be load from disk
-	// // here is the font :
-	// // ftp://ftp.figlet.org/pub/figlet/fonts/contributed.tar.gz
-	// // ftp://ftp.figlet.org/pub/figlet/fonts/international.tar.gz
-	// // download and extract to the disk,then specify the file path to load
-	// // ascii.LoadFont("/usr/local/Cellar/figlet/2.2.5/share/figlet/fonts/")
-
+	// change the font
+	// except the default font,others need to be load from disk
+	// here is the font :
+	// ftp://ftp.figlet.org/pub/figlet/fonts/contributed.tar.gz
+	// ftp://ftp.figlet.org/pub/figlet/fonts/international.tar.gz
+	// download and extract to the disk,then specify the file path to load
+	ascii.LoadFont("/usr/local/Cellar/figlet/2.2.5/share/figlet/fonts/")
 	options.FontName = "bigMoneyNE"
-
 	ascii.LoadFont("./fonts/bigMoneyNE.flf")
 	renderStr, _ := ascii.RenderOpts(str, options)
 	fmt.Println(renderStr)
+
 }
+
+```
