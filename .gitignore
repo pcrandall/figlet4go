@@ -2,6 +2,7 @@
 *.o
 *.a
 *.so
+figlet4go
 
 # Folders
 _obj
